@@ -1,0 +1,125 @@
+.chat-container{
+    display: flex;
+    height: 100vh;
+    background-color: #111827;
+}
+.sidebar{
+    width: 300px;
+    background-color: #1f2937;
+    padding: 20px;
+    border-right: 1px solid #374151;
+}
+
+.logo{
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.new-chat-btn{
+    width: 100%;
+    padding: 14px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.new-chat-btn:hover{
+    background-color: #1d4ed8;
+}
+
+.chat-area{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header{
+    padding: 20px;
+    background-color: #1f2937;
+    border-bottom: 1px solid #374151;
+}
+
+.chat-header h2{
+    color: white;
+}
+
+.messages{
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.user-message{
+    background-color: #2563eb;
+    color: white;
+    padding: 14px;
+    border-radius: 14px;
+    width: fit-content;
+    margin-left: auto;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.ai-message{
+    background-color: #374151;
+    color: white;
+    padding: 14px;
+    border-radius: 14px;
+    width: fit-content;
+    max-width: 400px;
+}
+
+.chat-input-area{
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    background-color: #1f2937;
+}
+
+.chat-input{
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #374151;
+    color: white;
+    outline: none;
+}
+
+.send-btn{
+    padding: 14px 25px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.send-btn:hover{
+    background-color: #1d4ed8;
+}
+
+.chat-list{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.chat-item{
+    background:#2d3b55;
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+    color:white;
+}
+
+.chat-item:hover{
+    background:#3d4f73;
+}
