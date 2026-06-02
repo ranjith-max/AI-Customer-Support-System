@@ -19,4 +19,9 @@ public class BackendApplication {
 	    public String test() {
 	        return "Backend Working!";
 	    }
+	 
+	 @GetMapping("/")
+	 public String home() {
+		 return "SPRING APP IS RUNNING";
+	 }
 }
