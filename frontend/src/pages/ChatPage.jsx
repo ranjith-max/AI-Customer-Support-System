@@ -45,7 +45,7 @@ function ChatPage(){
             text : msg.message,
 
         }));
-
+        console.log("Formatted" ,formatted);
         setMessage(formatted);
 
     }
@@ -93,15 +93,11 @@ function ChatPage(){
     let loadChats = async () => {
     try {
         let data = await getAllChats();
+        setChats(data);
 
-        if (Array.isArray(data) && data.length > 0) {
-
-            setChats(data);
+        if(data.length > 0){
             setChatId(data[0].id);
-            loadMessages(data[0].id);
-
-        } else {
-            createNewChat();
+            await loadMessages(data[0].id);
         }
 
     } catch (error) {
