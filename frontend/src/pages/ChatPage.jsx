@@ -11,7 +11,7 @@ function ChatPage(){
     let [chats,setChats] = useState([]);
 
     useEffect(()=>{
-        createNewChat();
+        
         loadChats();
     },[]);
 
@@ -90,15 +90,24 @@ function ChatPage(){
         }
     }
 
-    let loadChats = async()=>{
-        try{
-            let data = await getAllChats();
-            setChats(Array.isArray(data) ? data :[]);
+    let loadChats = async () => {
+    try {
+        let data = await getAllChats();
+
+        if (Array.isArray(data) && data.length > 0) {
+
+            setChats(data);
+            setChatId(data[0].id);
+            loadMessages(data[0].id);
+
+        } else {
+            createNewChat();
         }
-        catch(error){
-            console.log(error);
-        }
+
+    } catch (error) {
+        console.log(error);
     }
+};
 
     return (
         <div className="chat-container">

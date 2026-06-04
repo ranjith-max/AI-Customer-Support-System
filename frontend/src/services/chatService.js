@@ -64,4 +64,5 @@ export const getAllChats = async()=> {
         },
     }
 )
+   return response.data;
 }
