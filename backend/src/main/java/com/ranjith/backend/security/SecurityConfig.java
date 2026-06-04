@@ -65,23 +65,12 @@ public class SecurityConfig {
 
         CorsConfiguration configuration =
                 new CorsConfiguration();
-
-        configuration.addAllowedOrigin(
-                "http://localhost:5173"
-        );
-
+        configuration.addAllowedOriginPattern("*");
         configuration.addAllowedMethod("*");
-
         configuration.addAllowedHeader("*");
-
-        UrlBasedCorsConfigurationSource source =
-                new UrlBasedCorsConfigurationSource();
-
-        source.registerCorsConfiguration(
-                "/**",
-                configuration
-        );
-
+        
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
         return source;
     }
 }
