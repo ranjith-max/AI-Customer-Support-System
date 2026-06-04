@@ -25,7 +25,6 @@ function LoginPage() {
     e.preventDefault();
 
     try {
-
       const response = await loginUser(formData);
 
       localStorage.setItem(
