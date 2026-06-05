@@ -2,6 +2,10 @@
 
 A full-stack AI-powered customer support platform built using React, Spring Boot, PostgreSQL, JWT Authentication, and Groq AI.
 
+## 🚀 Live Demo
+
+https://ai-customer-support-system-ee33.vercel.app/
+
 ## Features
 
 * Secure User Registration & Login
