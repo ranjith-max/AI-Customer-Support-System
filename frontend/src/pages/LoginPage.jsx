@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 
 import { loginUser } from "../services/authService";
 
@@ -25,7 +25,7 @@ function LoginPage() {
     e.preventDefault();
 
     try {
-      const response = await loginUser(formData);
+      let response = await loginUser(formData.email,formData.password)
 
       localStorage.setItem(
         "token",
@@ -82,11 +82,19 @@ function LoginPage() {
           >
             Login
           </button>
-
+          <p className="text-gray-300 text-center mt-4">
+  Don't have an account?{" "}
+  <Link
+    to="/register"
+    className="text-blue-400 hover:text-blue-300"
+  >
+    Register
+  </Link>
+</p>
         </form>
 
       </div>
-
+    
     </div>
   );
 }
